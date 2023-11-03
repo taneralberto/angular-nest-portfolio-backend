@@ -9,7 +9,6 @@ export class CertificatesController {
 
     @Get()
     getAll(): CertificatesDto[] {
-        console.log('entrando');
         return this.certicatesService.getAll();
     }
 

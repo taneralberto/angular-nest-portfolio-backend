@@ -4,7 +4,7 @@ export const blogs: BlogsDto[] = [
     {
         id: '1',
         title: "Elecciones de Brasil",
-        content: 'content1',
+        content: "content1",
         thumbnail: "https://ikona.telesurtv.net/content/uploads/2023/09/nuevocnvl3.jpg.webp",
         tags: [ 'Elecciones', 'Brasil', ],
         createdAt: new Date(),
