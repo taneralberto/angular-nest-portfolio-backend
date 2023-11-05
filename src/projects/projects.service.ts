@@ -4,14 +4,13 @@ import { projects } from './data';
 
 @Injectable()
 export class ProjectsService {
+  private readonly projects: ProjectsDto[] = projects;
 
-    private readonly projects: ProjectsDto[] = projects;
+  getAll() {
+    return this.projects;
+  }
 
-    getAll() {
-        return this.projects;
-    }
-
-    getById(id: string) {
-        return this.projects.find(item => id === item.id);
-    }
+  getById(id: string) {
+    return this.projects.find((item) => id === item.id);
+  }
 }

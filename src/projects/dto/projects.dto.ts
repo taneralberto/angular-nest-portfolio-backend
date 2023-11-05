@@ -1,24 +1,23 @@
-import { IsArray, IsOptional, IsString, IsUUID, IsUrl } from "class-validator";
+import { IsArray, IsOptional, IsString, IsUUID, IsUrl } from 'class-validator';
 
 export class ProjectsDto {
+  @IsUUID()
+  id: string;
 
-    @IsUUID()
-    id: string;
+  @IsString()
+  name: string;
 
-    @IsString()
-    name: string;
+  @IsString()
+  @IsOptional()
+  description?: string;
 
-    @IsString()
-    @IsOptional()
-    description?: string
+  @IsArray()
+  skills: string[];
 
-    @IsArray()
-    skills: string[]
+  @IsUrl()
+  url: string;
 
-    @IsUrl()
-    url: string;
-
-    @IsUrl()
-    @IsOptional()
-    thumbnail?: string;
+  @IsUrl()
+  @IsOptional()
+  thumbnail?: string;
 }

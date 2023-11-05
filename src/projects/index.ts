@@ -1,5 +1,6 @@
 export * from './data';
 export * from './dto';
-export * from './index';
+export * from './project.entity';
 export * from './projects.controller';
+export * from './projects.module';
 export * from './projects.service';

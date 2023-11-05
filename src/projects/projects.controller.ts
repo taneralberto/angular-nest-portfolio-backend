@@ -3,16 +3,15 @@ import { ProjectsService } from './projects.service';
 
 @Controller('projects')
 export class ProjectsController {
+  constructor(private projectsService: ProjectsService) {}
 
-    constructor(private projectsService: ProjectsService) {}
+  @Get()
+  getAll() {
+    return this.projectsService.getAll();
+  }
 
-    @Get()
-    getAll() {
-        return this.projectsService.getAll();
-    }
-
-    @Get(':id')
-    getById(@Param('id') id: string) {
-        return this.projectsService.getById(id);
-    }
+  @Get(':id')
+  getById(@Param('id') id: string) {
+    return this.projectsService.getById(id);
+  }
 }
