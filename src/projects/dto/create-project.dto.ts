@@ -1,9 +1,6 @@
-import { IsArray, IsOptional, IsString, IsUUID, IsUrl } from 'class-validator';
+import { IsArray, IsOptional, IsString, IsUrl } from 'class-validator';
 
-export class ProjectsDto {
-  @IsUUID()
-  id: string;
-
+export class CreateProjectDto {
   @IsString()
   name: string;
 

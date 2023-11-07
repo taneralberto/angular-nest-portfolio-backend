@@ -1,7 +1,6 @@
 import { IsArray, IsOptional, IsString, IsUrl } from 'class-validator';
 
 export class CreateCertificateDto {
-
   @IsString()
   name: string;
 

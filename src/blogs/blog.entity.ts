@@ -1,8 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({name: 'blogs'})
+@Entity({ name: 'blogs' })
 export class Blog {
-
   @PrimaryGeneratedColumn('increment')
   id: string;
 
@@ -15,7 +14,7 @@ export class Blog {
   @Column()
   thumbnail?: string;
 
-  @Column({type: 'text', array: true, default: []})
+  @Column({ type: 'text', array: true, default: [] })
   tags?: string[];
 
   @Column()

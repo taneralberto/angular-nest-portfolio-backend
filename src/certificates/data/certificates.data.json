@@ -1,13 +1,11 @@
 [
   {
-    "id": "1",
     "name": "Mecanografía",
     "company": "Ratatype",
     "certificate_url": "https://www.ratatype.es/u5840444/certificate/",
     "skills": []
   },
   {
-    "id": "2",
     "name": "Curso Práctico de WordPress",
     "company": "Platzi",
     "certificate_url":
@@ -15,7 +13,6 @@
     "skills": ["WordPress", "HTML", "PHP"]
   },
   {
-    "id": "3",
     "name": "Tailwind CSS",
     "company": "Platzi",
     "certificate_url":
@@ -23,7 +20,6 @@
     "skills": ["CSS"]
   },
   {
-    "id": "4",
     "name": "Buenas Prácticas para la Escritura de Código",
     "company": "Platzi",
     "certificate_url":
@@ -31,7 +27,6 @@
     "skills": []
   },
   {
-    "id": "5",
     "name": "Creación de Temas y Plugin en WordPress",
     "company": "Platzi",
     "certificate_url":
@@ -39,7 +34,6 @@
     "skills": ["WordPress", "CSS", "JavaScript", "HTML", "PHP", "SQL"]
   },
   {
-    "id": "6",
     "name": "Creación y Optimización de Sitios Web con WordPress",
     "company": "Platzi",
     "certificate_url":
@@ -47,7 +41,6 @@
     "skills": ["WordPress", "CSS", "HTML", "PHP"]
   },
   {
-    "id": "7",
     "name": "Curso Profesional de Git y GitHub",
     "company": "Platzi",
     "certificate_url":
@@ -55,7 +48,6 @@
     "skills": ["CLI", "GitHub"]
   },
   {
-    "id": "8",
     "name": "EcmaScript 6+",
     "company": "Platzi",
     "certificate_url":
@@ -63,7 +55,6 @@
     "skills": ["JavaScript"]
   },
   {
-    "id": "9",
     "name": "Introducción a PHP",
     "company": "Platzi",
     "certificate_url":
@@ -71,7 +62,6 @@
     "skills": ["PHP", "OOP", "SQL"]
   },
   {
-    "id": "10",
     "name": "Introducción a Terminal y Línea de Comandos",
     "company": "Platzi",
     "certificate_url":

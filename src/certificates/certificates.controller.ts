@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { CertificatesService } from './certificates.service';
 import { Certificate } from './certificate.entity';
 import { CreateCertificateDto, UpdateCertificateDto } from './dto';
@@ -19,12 +27,20 @@ export class CertificatesController {
   }
 
   @Post()
-  create(@Body() certificate: CreateCertificateDto | CreateCertificateDto[]) {
+  create(@Body() certificate: CreateCertificateDto) {
     return this.certificatesService.create(certificate);
   }
 
+  @Post('array')
+  createFromArray(@Body() certificates: CreateCertificateDto[]) {
+    return this.certificatesService.createFromArray(certificates);
+  }
+
   @Patch(':id')
-  update(@Param('id') id: number, @Body() certificate: UpdateCertificateDto): Promise<UpdateResult> {
+  update(
+    @Param('id') id: number,
+    @Body() certificate: UpdateCertificateDto,
+  ): Promise<UpdateResult> {
     return this.certificatesService.update(id, certificate);
   }
 
