@@ -1,9 +1,16 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity({ name: 'blogs' })
 export class Blog {
   @PrimaryGeneratedColumn('increment')
-  id: string;
+  id: number;
 
   @Column()
   title: string;
@@ -18,10 +25,16 @@ export class Blog {
   tags?: string[];
 
   @Column()
+  @CreateDateColumn()
   createdAt?: Date;
 
   @Column()
+  @UpdateDateColumn()
   modifiedAt?: Date;
+
+  @Column()
+  @DeleteDateColumn()
+  deletedAt?: Date;
 
   @Column()
   slug: string;

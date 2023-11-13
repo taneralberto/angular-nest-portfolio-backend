@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, UpdateResult } from 'typeorm';
-import { Project } from './project.entity';
 import { CreateProjectDto, UpdateProjectDto } from './dto';
+import { Project } from './project.entity';
 
 @Injectable()
 export class ProjectsService {
@@ -32,8 +32,7 @@ export class ProjectsService {
   }
 
   create(project: CreateProjectDto): Promise<Project> {
-    const newProject: CreateProjectDto =
-      this.projectRepository.create(project);
+    const newProject: CreateProjectDto = this.projectRepository.create(project);
 
     return this.projectRepository.save(newProject);
   }
@@ -55,11 +54,11 @@ export class ProjectsService {
   async update(id: number, project: UpdateProjectDto): Promise<UpdateResult> {
     const projectExist: boolean = await this.projectRepository.exist({
       where: {
-        id
-      }
+        id,
+      },
     });
 
-    if(!projectExist) throw new NotFoundException('Project Not Found');
+    if (!projectExist) throw new NotFoundException('Project Not Found');
 
     let updatedProject: UpdateResult;
 
@@ -75,11 +74,11 @@ export class ProjectsService {
   async remove(id: number): Promise<Project> {
     const project: Project = await this.projectRepository.findOne({
       where: {
-        id
-      }
+        id,
+      },
     });
 
-    if(!project) throw new NotFoundException('Project Not Found');
+    if (!project) throw new NotFoundException('Project Not Found');
 
     return this.projectRepository.remove(project);
   }

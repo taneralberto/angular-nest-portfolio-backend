@@ -1,15 +1,12 @@
 import {
   IsArray,
   IsDateString,
+  IsOptional,
   IsString,
-  IsUUID,
   IsUrl,
 } from 'class-validator';
 
-export class BlogsDto {
-  @IsUUID()
-  id: string;
-
+export class CreateBlogDto {
   @IsString()
   title: string;
 
@@ -17,17 +14,22 @@ export class BlogsDto {
   content: string;
 
   @IsUrl()
+  @IsOptional()
   thumbnail?: string;
 
   @IsArray()
+  @IsOptional()
   tags?: string[];
 
   @IsDateString()
+  @IsOptional()
   createdAt?: Date;
 
   @IsDateString()
+  @IsOptional()
   modifiedAt?: Date;
 
   @IsString()
-  slug: string;
+  @IsOptional()
+  slug?: string;
 }

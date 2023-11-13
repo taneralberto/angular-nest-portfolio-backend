@@ -1,2 +1,2 @@
-export * from './blogs.dto';
-export * from './index';
+export * from './create-blog.dto';
+export * from './update-blog.dto';
